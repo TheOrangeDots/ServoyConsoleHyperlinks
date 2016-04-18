@@ -1,7 +1,7 @@
 # ServoyDeveloperConsolePatternMatcher
 Eclipse console Pattern Matcher for the Servoy IDE to match form and element patterns and convert them to links
 
-When this plugin is installed in the Servoy IDE (Eclipse), each entry into the console will be scanned for the patterns forms.xxxx and forms.xxxx.elements.yyyy and if found, those patterns will be converted into links that, when clicked, will open the form in a form Editor and optionally focus the specified element
+When this plugin is installed in the Servoy IDE (Eclipse), each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy` and if found, those patterns will be converted into links that, when clicked, will open the form in a form Editor and optionally focus the specified element
 
 # Requirements
 - Servoy Developer 7 or higher
