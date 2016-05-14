@@ -1,5 +1,5 @@
 # Servoy Console Hyperlink plugin
-The `Servoy Console Hyperlinks plugin` for Servoy Developer matches form and element name patterns in the Console and converts they to hyperlinks that open the relevant Form Editor and selects the element (if specified) when clicked  
+The `Servoy Console Hyperlinks plugin` for Servoy Developer matches form and element name patterns in the Console and converts them to hyperlinks that open the relevant Form Editor and selects the element (if specified) when clicked  
 
 Each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy` and if found, converts the matched text into links
 
