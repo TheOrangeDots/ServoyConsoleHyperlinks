@@ -3,6 +3,13 @@ The `Servoy Console Hyperlinks` plugin matches form and element name patterns in
 
 Each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy` and if found, converts the matched text into links
 
+# Use case
+This plugin was developed to aid in the process of making the UI in Servoy solutions consistent. In an attempt to fix inconsistencies, code was written to analyse forms using the `solutionModel` and write inconsistencies out to the Console in Servoy Developer using `application.output`
+
+However, opening the form in question in a Form Editor and locating the element in question turned out to be very cumbersome and time consuming. Hence this plugin was written to convert the entries in the Console to a hyperlink, so opening the form in a form Editor and selecting the element would be as simple as clicking the link
+
+While this was the use case for writting the plugin, other people might find other usecases for it
+
 # Requirements
 - Servoy Developer 7 or higher
 
