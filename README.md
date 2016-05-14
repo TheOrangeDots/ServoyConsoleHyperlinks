@@ -7,7 +7,7 @@ When this plugin is installed in the Servoy IDE (Eclipse), each entry into the c
 - Servoy Developer 7 or higher
 
 # Installation
-The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through Help > Install New Software in your Eclipse IDE and specifying (https://github.com/TheOrangeDots/ServoyDeveloperConsolePatternMatcher/raw/master/patternMatcher.updateSite) as the update site
+The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software in your Eclipse IDE` and specifying https://github.com/TheOrangeDots/ServoyDeveloperConsolePatternMatcher/raw/master/patternMatcher.updateSite as the update site
 
 # Feature Requests & Bugs
 Found a bug or would like to see a new feature implemented? Raise an issue in the [Issue Tracker](https://github.com/TheOrangeDots/ServoyDeveloperConsolePatternMatcher/issues)
