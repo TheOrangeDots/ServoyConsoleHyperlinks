@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         name="Servoy Console Matchers Startup"
+         point="org.eclipse.ui.startup">
+      <startup
+         class="com.tod.eclipse.servoy.console.patternMatchers.Startup">
+      </startup>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.console.consolePatternMatchListeners">
+ 		<consolePatternMatchListener
+            class="com.tod.eclipse.servoy.console.patternMatchers.ElementNamePatternMatcher"
+            id="servoyElementMatcher"
+            regex="forms\.([a-zA-z]{1}[a-zA-Z$_\-0-9]*)(?:\.elements\.([a-zA-z]{1}[a-zA-Z$_\-0-9]*))?">
+	    	<enablement>
+	       		<or>
+	          		<test
+	                	property="org.eclipse.ui.console.consoleTypeTest"
+	                	value="javascript_console">
+	          		</test> 		
+	          		<test
+	                	property="org.eclipse.ui.console.consoleTypeTest"
+	                	value="org.eclipse.dltk.debug.ui.display.DebugConsole">
+	          		</test> 
+	          		<test
+	                	property="org.eclipse.ui.console.consoleTypeTest"
+	                	value="org.eclipse.dltk.debug.ui.ScriptDebugConsoleType">
+	          		</test>
+	       		</or>
+	    	</enablement>
+	 	</consolePatternMatchListener>
+	</extension>
+</plugin>

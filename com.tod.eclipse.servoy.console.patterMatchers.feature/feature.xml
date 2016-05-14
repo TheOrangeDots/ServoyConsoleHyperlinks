@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.tod.eclipse.servoy.console.patterMatchers.feature"
+      label="Servoy Console Hyperlinks"
+      version="0.0.1"
+      provider-name="The Orange Dots">
+
+   <license url="">
+      MIT
+   </license>
+
+   <plugin
+         id="com.tod.eclipse.servoy.console.patterMatchers"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
