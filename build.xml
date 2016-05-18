@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project default="feature_export" name="build">
-	<target name="feature_export">
-		<pde.exportFeatures destination="C:\Users\pbakker\Desktop\ConsoleHyperlinkPlugin" exportSource="false" exportType="directory" features="com.tod.eclipse.servoy.console.patternMatchers.feature" useJARFormat="true"/>
-	</target>
-</project>
