@@ -1,4 +1,4 @@
-package com.tod.eclipse.servoy.console.patternMatchers;
+package com.tod.eclipse.servoy.console.hyperlinks;
 
 import org.eclipse.ui.IStartup;
 

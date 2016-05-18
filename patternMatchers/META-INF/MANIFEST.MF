@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Servoy Console Hyperlinks
-Bundle-SymbolicName: com.tod.eclipse.servoy.console.patternMatchers;singleton:=true
-Bundle-Version: 0.0.1
+Bundle-SymbolicName: com.tod.eclipse.servoy.console.hyperlinks;singleton:=true
+Bundle-Version: 0.0.2
 Bundle-Vendor: The Orange Dots
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ JavaSE-1.7
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources,
  org.eclipse.core.expressions,
@@ -18,4 +19,4 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.search,
  com.servoy.eclipse.designer,
  org.eclipse.gef
-Export-Package: com.tod.eclipse.servoy.console.patternMatchers
+Export-Package: com.tod.eclipse.servoy.console.hyperlinks
