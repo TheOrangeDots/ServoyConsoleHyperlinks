@@ -13,6 +13,7 @@ import com.servoy.j2db.persistence.BaseComponent;
 import com.servoy.j2db.persistence.Form;
 import com.servoy.j2db.persistence.IPersist;
 import com.servoy.j2db.persistence.IPersistVisitor;
+import com.servoy.j2db.util.UUID;
 
 public class ElementHyperlink implements IHyperlink {
 
@@ -39,6 +40,7 @@ public class ElementHyperlink implements IHyperlink {
 	public void linkActivated() {
 		FlattenedSolution fs = ServoyModelFinder.getServoyModel().getActiveProject().getEditingFlattenedSolution();
 		Form f = fs.getForm(form);
+		UUID persistUUID = null;
 		
 		if (f == null) {
 			return;
@@ -50,23 +52,31 @@ public class ElementHyperlink implements IHyperlink {
 			return;
 		}
 		
+		if (this.element.startsWith("<")) {
+			persistUUID = UUID.fromString(this.element.substring(1, this.element.length() - 1));
+		} else {
+			String elementName = this.element.substring(1);
 			IPersist persist = (IPersist) fs.getFlattenedForm(f).acceptVisitor(new IPersistVisitor() {
-			public Object visit(IPersist o) {
-				if (o instanceof BaseComponent) {
-					BaseComponent bc = (BaseComponent) o;
-					if (element.equals(bc.getName())) {
-						return bc;
+				public Object visit(IPersist o) {
+					if (o instanceof BaseComponent) {
+						BaseComponent bc = (BaseComponent) o;
+						if (elementName.equals(bc.getName())) {
+							return bc;
+						}
 					}
+					return IPersistVisitor.CONTINUE_TRAVERSAL;
 				}
-				return IPersistVisitor.CONTINUE_TRAVERSAL;
+			});
+			if (persist != null) {
+				persistUUID = persist.getUUID();
 			}
-		});
+		}
 
-		if (persist == null) {
+		if (persistUUID == null) {
 			return;
 		}
-	
+		
 		BaseVisualFormEditor fe = (BaseVisualFormEditor) ep;
-		((BaseVisualFormEditorDesignPage)fe.getGraphicaleditor()).showPersist(AbstractRepository.searchPersist(f, persist.getUUID()));
+		((BaseVisualFormEditorDesignPage)fe.getGraphicaleditor()).showPersist(AbstractRepository.searchPersist(f, persistUUID));
 	}
 }

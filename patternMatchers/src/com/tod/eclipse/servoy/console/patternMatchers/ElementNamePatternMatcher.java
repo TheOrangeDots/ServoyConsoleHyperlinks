@@ -12,7 +12,7 @@ import org.eclipse.ui.console.TextConsole;
 import com.servoy.j2db.util.Debug;
 
 public class ElementNamePatternMatcher implements IPatternMatchListenerDelegate {
-	static Pattern ElementNamePattern = Pattern.compile("forms\\.([a-zA-z]{1}[a-zA-Z$_\\-0-9]*)(?=\\.elements\\.([a-zA-z]{1}[a-zA-Z$_\\-0-9]*))?");
+	static Pattern ElementNamePattern = Pattern.compile("forms\\.([a-zA-z]{1}[a-zA-Z$_\\-0-9]*)(?:\\.elements(\\.[a-zA-z$_]{1}[a-zA-Z$_\\-0-9]*|<[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}>))");
 	
 	@Override
 	public void connect(TextConsole textConsole) {
