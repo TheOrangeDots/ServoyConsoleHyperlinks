@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Servoy Console Hyperlinks
 Bundle-SymbolicName: com.tod.eclipse.servoy.console.hyperlinks;singleton:=true
-Bundle-Version: 0.0.1
+Bundle-Version: 0.0.2
 Bundle-Vendor: The Orange Dots
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
  JavaSE-1.7
