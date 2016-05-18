@@ -24,7 +24,7 @@ Once installed, the only thing needed to use the plugin is write entries into th
 
  
 For example in the context of a form:
-```
+```javascript
 //Creates a hyperlink that opens the specified form in the Form Editor
 application.output('forms.' + controller.getName())
 
@@ -33,8 +33,9 @@ application.output('forms.' + controller.getName() + '.elements.' + elements[0].
 
 //Creates a hyperlink that opens the specified form in the Form Editor and selects the specified (by UUID) element
 //This variant is handy for anonymous elements (elements without their name property set)
-var form  = solutionModel.getForm(controller.getName())
-application.output('forms.' + controller.getName() + '.elements<' + form.getComponent(elements[0].getName()).getUUID() + '>')
+const JSFORM  = solutionModel.getForm(controller.getName())
+const UUID = JSFORM.getComponent(elements[0].getName()).getUUID()
+application.output('forms.' + JSFORM.getName() + '.elements<' + UUID + '>')
 ```
 
 # Feature Requests & Bugs
