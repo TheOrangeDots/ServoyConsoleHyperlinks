@@ -1,4 +1,4 @@
-package com.tod.eclipse.servoy.console.patternMatchers;
+package com.tod.eclipse.servoy.console.hyperlinks;
 
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.console.IHyperlink;
@@ -15,7 +15,7 @@ import com.servoy.j2db.persistence.IPersist;
 import com.servoy.j2db.persistence.IPersistVisitor;
 import com.servoy.j2db.util.UUID;
 
-public class ElementHyperlink implements IHyperlink {
+public class Hyperlink implements IHyperlink {
 
 	private String form;
 	private String element;
@@ -23,7 +23,7 @@ public class ElementHyperlink implements IHyperlink {
 	/**
 	 * Constructor for ElementHyperlink.
 	 */
-	public ElementHyperlink(String form, String element) {
+	public Hyperlink(String form, String element) {
 		this.form = form;
 		this.element = element;
 	}

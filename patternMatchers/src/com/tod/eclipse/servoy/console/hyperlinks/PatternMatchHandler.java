@@ -1,4 +1,4 @@
-package com.tod.eclipse.servoy.console.patternMatchers;
+package com.tod.eclipse.servoy.console.hyperlinks;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +11,7 @@ import org.eclipse.ui.console.TextConsole;
 
 import com.servoy.j2db.util.Debug;
 
-public class ElementNamePatternMatcher implements IPatternMatchListenerDelegate {
+public class PatternMatchHandler implements IPatternMatchListenerDelegate {
 	static Pattern ElementNamePattern = Pattern.compile("forms\\.([a-zA-z]{1}[a-zA-Z$_\\-0-9]*)(?:\\.elements(\\.[a-zA-z$_]{1}[a-zA-Z$_\\-0-9]*|<[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}>))");
 	
 	@Override
@@ -35,7 +35,7 @@ public class ElementNamePatternMatcher implements IPatternMatchListenerDelegate 
 			if (m.find()) {
 				String formName = m.group(1);
 				String elementName = m.group(2);
-				IHyperlink link = new ElementHyperlink(formName, elementName);
+				IHyperlink link = new Hyperlink(formName, elementName);
 				textConsole.addHyperlink(link, offset, length);
 			}
 		} catch (BadLocationException e) {

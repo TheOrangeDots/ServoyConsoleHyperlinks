@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="com.tod.eclipse.servoy.console.patternMatchers.feature"
+      id="com.tod.eclipse.servoy.console.hyperlinks.feature"
       label="Servoy Console Hyperlinks"
       version="0.0.1"
       provider-name="The Orange Dots">
@@ -38,7 +38,7 @@ SOFTWARE.
    </url>
 
    <plugin
-         id="com.tod.eclipse.servoy.console.patternMatchers"
+         id="com.tod.eclipse.servoy.console.hyperlinks"
          download-size="0"
          install-size="0"
          version="0.0.0"
