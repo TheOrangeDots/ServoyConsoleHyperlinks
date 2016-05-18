@@ -14,7 +14,7 @@ While this was the use case for writting the plugin, other use cases could very 
 - Servoy Developer 7 or higher
 
 # Installation
-The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software` and specifying https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/raw/master/patternMatchers.updateSite as the update site
+The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software` and specifying https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/raw/master/updateSite as the update site
 
 # Usage
 Once installed, the only thing needed to use the plugin is write entries into the Console in Servoy Developer using `application.output` or the [svyLogManager](https://github.com/Servoy/svyUtils/blob/develop/svyUtils/svyLogManager.js) that contain references to forms or elements on forms using one of the following patterns:
