@@ -1,19 +1,37 @@
-# ServoyDeveloperConsolePatternMatcher
-Eclipse console Pattern Matcher for the Servoy IDE to match form and element patterns and convert them to links
+# Servoy Console Hyperlink plugin
+The `Servoy Console Hyperlinks` plugin matches form and element name patterns in log entries in the Console in [Servoy](http://servoy.com) Developer and converts them to hyperlinks that open the relevant Form Editor and selects the element (if specified) when clicked
 
-When this plugin is installed in the Servoy IDE (Eclipse), each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy` and if found, those patterns will be converted into links that, when clicked, will open the form in a Form Editor and focus the specified element (if specified)
+Each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy` and if found, converts the matched text into links
+
+# Use case
+This plugin was developed to aid in the process of making the UI in Servoy solutions consistent. In an attempt to fix inconsistencies, code was written to analyse forms using the `solutionModel` and write inconsistencies out to the Console in Servoy Developer using `application.output`
+
+However, opening the form in question in a Form Editor and locating the element in question turned out to be very cumbersome and time consuming. Hence this plugin was written to convert the entries in the Console to a hyperlink, so opening the form in a form Editor and selecting the element would be as simple as clicking the link
+
+While this was the use case for writting the plugin, other people might find other use cases for it
 
 # Requirements
 - Servoy Developer 7 or higher
 
 # Installation
-The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software in your Eclipse IDE` and specifying https://github.com/TheOrangeDots/ServoyDeveloperConsolePatternMatcher/raw/master/patternMatcher.updateSite as the update site
+The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software` and specifying https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/raw/master/patternMatchers.updateSite as the update site
+
+# Usage
+Once installed, the only thing needed to use the plugin is write entries into the Console in Servoy Developer using `application.output` or the [svyLogManager](https://github.com/Servoy/svyUtils/blob/develop/svyUtils/svyLogManager.js) that contain references to forms or elements on forms using one of the following patterns:
+- forms.%%formName%%
+- forms.%%formName%%.elements.%%elementName%%
+ 
+For example in the context of a form:
+```
+application.output('forms.' + controller.getName())
+application.output('forms.' + controller.getName() + '.elements' + elements[0].getName())
+```
 
 # Feature Requests & Bugs
-Found a bug or would like to see a new feature implemented? Raise an issue in the [Issue Tracker](https://github.com/TheOrangeDots/ServoyDeveloperConsolePatternMatcher/issues)
+Found a bug or would like to see a new feature implemented? Raise an issue in the [Issue Tracker](https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/issues)
 
 # Contributing
 Eager to fix a bug or introduce a new feature? Clone the repository and issue a pull request
 
 # License
-ServoyDeveloperConsolePatternMatcher is licensed under MIT License
+The Servoy Console Hyperlink plugin is licensed under MIT License
