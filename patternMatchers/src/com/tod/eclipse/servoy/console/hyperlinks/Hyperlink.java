@@ -55,7 +55,7 @@ public class Hyperlink implements IHyperlink {
 		if (this.element.startsWith("<")) {
 			persistUUID = UUID.fromString(this.element.substring(1, this.element.length() - 1));
 		} else {
-			String elementName = this.element.substring(1);
+			final String elementName = this.element.substring(1);
 			IPersist persist = (IPersist) fs.getFlattenedForm(f).acceptVisitor(new IPersistVisitor() {
 				public Object visit(IPersist o) {
 					if (o instanceof BaseComponent) {
