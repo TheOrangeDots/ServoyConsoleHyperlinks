@@ -20,7 +20,6 @@ import com.servoy.j2db.persistence.BaseComponent;
 import com.servoy.j2db.persistence.Form;
 import com.servoy.j2db.persistence.IPersist;
 import com.servoy.j2db.persistence.IPersistVisitor;
-import com.servoy.j2db.util.Debug;
 import com.servoy.j2db.util.Pair;
 import com.servoy.j2db.util.UUID;
 
@@ -101,13 +100,14 @@ public class Hyperlink implements IHyperlink {
 				gm.gotoMarker(marker);
 			}
 		} catch (CoreException e) {
-			Debug.error("Failure selecting element", e);
+			System.out.println("Failure selecting element");
+			e.printStackTrace();
 		} finally {
 			if (marker != null)
 				try {
 					marker.delete();
 				} catch (CoreException e) {
-					// ignore
+					e.printStackTrace();
 				}
 		}
 	}
