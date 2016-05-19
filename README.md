@@ -1,7 +1,7 @@
 # Servoy Console Hyperlink plugin
-The `Servoy Console Hyperlinks` plugin matches form and element name patterns in log entries in the Console in [Servoy](http://servoy.com) Developer and converts them to hyperlinks that open the relevant Form Editor and selects the element (if specified) when clicked
+The `Servoy Console Hyperlinks` plugin matches form and element name/UUID patterns in log entries in the Console in [Servoy](http://servoy.com) Developer and converts them to hyperlinks that open the relevant Form Editor and selects the element (if specified) when clicked
 
-Each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy`/`forms.xxxx.elements<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx> and if found, converts the matched text into links
+Each entry into the console will be scanned for the patterns `forms.xxxx` and `forms.xxxx.elements.yyyy`/`forms.xxxx.elements<xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx>` and if found, converts the matched text into links
 
 # Use case
 This plugin was developed to aid in the process of making the UI in Servoy solutions consistent. In an attempt to fix inconsistencies, code was written to analyse forms using the `solutionModel` and write inconsistencies out to the Console in Servoy Developer using `application.output`
@@ -17,7 +17,7 @@ While this was the use case for writting the plugin, other use cases could very 
 The Servoy Console Hyperlink plugin for Eclipse/Servoy Developer can be installed through `Help > Install New Software` and specifying https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/raw/master/updateSite as the update site
 
 # Usage
-Once installed, the only thing needed to use the plugin is write entries into the Console in Servoy Developer using `application.output` or the [svyLogManager](https://github.com/Servoy/svyUtils/blob/develop/svyUtils/svyLogManager.js) that contain references to forms or elements on forms using one of the following patterns:
+Once installed, the only thing needed to use the plugin is write entries into the Console in Servoy Developer using [application.output](https://wiki.servoy.com/display/public/DOCS/Application#Application-output) or the [svyLogManager](https://github.com/Servoy/svyUtils/blob/develop/svyUtils/svyLogManager.js) that contain references to forms or elements on forms using one of the following patterns:
 - forms.%%formName%%
 - forms.%%formName%%.elements.%%elementName%%
 - forms.%%formName%%.elements<%%elementUUID%%>
