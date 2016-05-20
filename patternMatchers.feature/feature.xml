@@ -35,7 +35,6 @@ SOFTWARE.
 
    <url>
       <update label="Servoy Console Hyperlinks Update Site" url="https://github.com/TheOrangeDots/ServoyConsoleHyperlinks/raw/master/updateSite"/>
-      <discovery label="Source Repository" url="https://github.com/TheOrangeDots/ServoyConsoleHyperlinks"/>
    </url>
 
    <plugin
